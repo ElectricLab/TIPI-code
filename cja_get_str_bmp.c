@@ -1,5 +1,11 @@
+
+// This is a function I wrote to allow for keyboard input when in 'bitmap' mode.
+// It provides auto-repeat, debounce, arrowing-around within input area,
+// asterisks-over-passwords, and can be passed in a ptr to a string to be 
+// used as a default value. It also returns special "escape" keys such 
+// as FCTN-BACK, DEL, etc to the caller.
+
 char cja_get_str_bmp(int row, int col, char *buf, int maxlen, int passwd_flag) {
-    // We'll return "escape" keys, such as FCTN-DEL, etc
     int x = 0;
     int y = 0;
     
